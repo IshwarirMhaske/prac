@@ -6,15 +6,143 @@
     <title>template </title>
     <style>
 
+         * {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+        
         .maindiv {
             text-align: center;
             margin: 0 auto;
             width: 100%;
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         }
+       
+        
+        .banner {
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(lotusbg.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .navbar {
+            width: 85%;
+            margin: auto;
+            padding: 35px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .logo {
+            width: 120px;
+            height: 120px;
+            cursor: pointer;
+        }
+        
+        .navbar ul li {
+            list-style: none;
+            display: inline-block;
+            margin: 0 20px;
+            position: relative;
+        }
+        
+        .navbar ul li a {
+            text-decoration: none;
+            color: rgb(240, 235, 235);
+            text-transform: uppercase;
+        }
+        
+        .navbar ul li::after {
+            content: '';
+            height: 3px;
+            width: 0;
+            background: #1cebda;
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            transition: 0.5s;
+        }
+        
+        .navbar ul li:hover::after {
+            width: 100%;
+        }
+        .content{
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: center;
+            color: rgb(255, 255, 255);
+        }
+        .content h1{
+            font-size: 50px;
+            margin-top: 90px;
+        }
+        .content p{
+            margin: 20px auto;
+            font-weight: 25px;
+        }
+        button{
+            width: 200px;
+            padding: 15px 0;
+            text-align: center;
+            margin: 20px 10px;
+            border-radius: 25px;
+            font-weight: bold;
+            border: 2px solid #12e6d1;
+            background: transparent;
+            color: #ffffff;
+            cursor: pointer;
+            position: relative;
+            /* overflow: hidden; */
+        }
+        span{
+            background: #12e6d1;
+            height: 100%;
+            width: 0;
+            border-radius: 25px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: -1;
+            transition: 0.5s;
+        }
+        button:hover span{
+            width: 100%;
+        }
+        button:hover{
+            border: none;
+        }
     </style>
 </head>
 <body>
+    <div class="banner">
+        <div class="navbar">
+            <img src="lotuslogo-removebg-preview.png" class="logo">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#aboutus">Aboutus</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+
+        </div>
+        <div class="content">
+            <h1>EXPLORE THE LOTUS WEBSITE</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing. <br> Voluptate, repellendus facere voluptatibus
+                veritatis ratione quibusdam harum! Cumque ab deserunt repellat.</p>
+                <div>
+                    <button type="button"><span></span>EXPLORE MORE</button>
+                    <button type="button"><span></span>FEEDBACK</button>
+                </div>
+        </div>
+
+    </div>
     <div class="maindiv">
         <h1 style="border: 1px solid black; background-color: black; color: white;">ASUS</h1>
         <img src="./unnamed.png" alt="ASUS Logo" style="width: auto; height: auto;">
